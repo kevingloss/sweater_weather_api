@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Forecast Service' do 
+RSpec.describe ForecastService do 
   it 'can get the forecast given lat/lon', :vcr do
     forecast = ForecastService.get_forecast(42.358894, -71.056742)
 
