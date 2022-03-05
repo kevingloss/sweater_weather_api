@@ -11,6 +11,7 @@ class ForecastService < ApiService
         f.params['lat'] = lat 
         f.params['lon'] = lon
         f.params['exclude'] = 'minutely,alerts'
+        f.params['units'] = 'imperial'
       end
 
       parse_json(response)
