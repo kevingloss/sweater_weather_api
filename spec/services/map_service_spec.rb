@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Map Service' do 
+RSpec.describe MapService do 
   describe 'can support forecast' do 
     it 'can get the lat/lon given a city/state', :vcr do
       service = MapService.get_coords('Boston,MA')
