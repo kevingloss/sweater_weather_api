@@ -581,6 +581,7 @@ RSpec.describe Forecast do
   it 'has the correct keys' do 
     forecast = Forecast.new(@data)
 
+    expect(forecast.id).to eq(nil)
     expect(forecast.current.keys).to eq([:datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon])
     expect(forecast.hourly.first.keys).to eq([:time, :temperature, :conditions, :icon])
     expect(forecast.daily.first.keys).to eq([:date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon])
