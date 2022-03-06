@@ -84,5 +84,6 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.filter_sensitive_data('<key>') { ENV['map_quest_key'] }
   config.filter_sensitive_data('<appid>') { ENV['weather_key'] }
+  config.filter_sensitive_data('<key>') { ENV['image_key'] }
   config.configure_rspec_metadata!
 end
