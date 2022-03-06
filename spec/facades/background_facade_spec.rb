@@ -10,6 +10,6 @@ RSpec.describe BackgroundFacade do
   it 'returns an error if no image found', :vcr do 
     background = BackgroundFacade.get_background('akshgai;eoirg0gij')
 
-    expect(background[:message]).to eq('No photo found.')
+    expect(background).to eq(nil)
   end
 end
