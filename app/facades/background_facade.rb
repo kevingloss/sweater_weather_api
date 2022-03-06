@@ -3,7 +3,7 @@ class BackgroundFacade
     def get_background(location)
       data = ImageService.get_background(location)[:photos][:photo].first
 
-      return {message: 'No photo found.'} if data == nil
+      return nil if data == nil
 
       Background.new(data, location)
     end
