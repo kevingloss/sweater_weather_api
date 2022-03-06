@@ -20,9 +20,9 @@ RSpec.describe Map do
         ]
       }
 
-      coord = Map.new(data)
+    coord = Map.new(data)
 
-      expect(coord.lat).to eq(42.358894)
-      expect(coord.lon).to eq(-71.056742)
+    expect(coord.lat).to eq(42.358894)
+    expect(coord.lon).to eq(-71.056742)
   end
 end
