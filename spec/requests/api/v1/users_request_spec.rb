@@ -54,7 +54,7 @@ RSpec.describe "User API Request", type: :request do
 
     post api_v1_users_path, headers: headers
 
-    expect(response.status).to eq(422)
-    expect(parse_json[:error]).to eq("param is missing or the value is empty: user")
+    expect(response.status).to eq(400)
+    expect(parse_json[:error]).to eq('Please enter valid email, password, and password confirmation.')
   end
 end
