@@ -42,6 +42,13 @@ RSpec.describe 'Books API Request' do
     expect(parse_json[:error]).to eq("Please enter valid location and quantity.")
   end
 
+  it 'throws an error if quantity is less than 0', :vcr do 
+    get api_v1_book_search_path, params: { location: 'denver,co', quantity: -1 }
+
+    expect(response.status).to eq(400)
+    expect(parse_json[:error]).to eq("Please enter valid location and quantity.")
+  end
+
   it 'does not receive any params', :vcr do 
     get api_v1_book_search_path
     

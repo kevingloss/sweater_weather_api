@@ -1,6 +1,6 @@
 class Api::V1::BooksController < ApplicationController
   def index 
-    if params[:location].present? && params[:quantity].present?
+    if params[:location].present? && (params[:quantity].present? && params[:quantity].to_i >= 0)
       coords = MapFacade.get_coords(params[:location])
       current_forecast = ForecastFacade.get_forecast(coords.lat, coords.lon).current
       book_details = BookFacade.get_books(params[:location], params[:quantity])
