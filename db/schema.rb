@@ -10,19 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_06_170221) do
+ActiveRecord::Schema.define(version: 2022_03_06_212133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "api_keys", force: :cascade do |t|
-    t.integer "bearer_id", null: false
-    t.string "bearer_type", null: false
-    t.string "token", null: false
+    t.string "api_key"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["bearer_id", "bearer_type"], name: "index_api_keys_on_bearer_id_and_bearer_type"
-    t.index ["token"], name: "index_api_keys_on_token", unique: true
+    t.index ["user_id"], name: "index_api_keys_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,4 +30,5 @@ ActiveRecord::Schema.define(version: 2022_03_06_170221) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "api_keys", "users"
 end
