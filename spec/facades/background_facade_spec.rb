@@ -7,7 +7,7 @@ RSpec.describe BackgroundFacade do
     expect(background).to be_an_instance_of(Background)
   end
 
-  it 'returns an error if no image found', :vcr do 
+  it 'return nil if no image found', :vcr do 
     background = BackgroundFacade.get_background('akshgai;eoirg0gij')
 
     expect(background).to eq(nil)
