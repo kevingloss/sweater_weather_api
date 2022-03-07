@@ -1,3 +1,3 @@
 class ApiKey < ApplicationRecord 
-  belongs_to :bearer, polymorphic: true
+  belongs_to :user
 end
