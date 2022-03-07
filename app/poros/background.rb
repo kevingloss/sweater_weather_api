@@ -1,10 +1,9 @@
 class Background 
-  attr_reader :id, :image_url, :location, :credit
+  attr_reader :id, :image, :credit
 
   def initialize(data, location)
     @id = nil 
-    @location = location
-    @image_url = background_url(data)
+    @image = { location: location, image_url: background_url(data) }
     @credit = {author: "ID: #{data[:owner]}", source: 'flickr.com'}
   end
 
