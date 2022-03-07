@@ -12,7 +12,8 @@ RSpec.describe 'Background API Requests', type: :request do
     expect(data[:id]).to eq(nil)
     expect(data[:type]).to eq('image')
     expect(data[:attributes]).to be_a(Hash)
-    expect(data[:attributes].keys).to eq([:image_url, :location, :credit])
+    expect(data[:attributes].keys).to eq([:image, :credit])
+    expect(data[:attributes][:image].keys).to eq([:location, :image_url])
     expect(data[:attributes][:credit].keys).to eq([:author, :source])
   end
 
@@ -27,7 +28,8 @@ RSpec.describe 'Background API Requests', type: :request do
     expect(data[:id]).to eq(nil)
     expect(data[:type]).to eq('image')
     expect(data[:attributes]).to be_a(Hash)
-    expect(data[:attributes].keys).to eq([:image_url, :location, :credit])
+    expect(data[:attributes].keys).to eq([:image, :credit])
+    expect(data[:attributes][:image].keys).to eq([:location, :image_url])
     expect(data[:attributes][:credit].keys).to eq([:author, :source])
   end
 

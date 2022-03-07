@@ -17,8 +17,9 @@ RSpec.describe Background do
     background = Background.new(data, 'boston, ma')
 
     expect(background.id).to eq(nil)
-    expect(background.location).to eq('boston, ma')
-    expect(background.image_url).to eq("https://live.staticflickr.com/65535/51920565621_75ff0825a7.jpg")
+    expect(background.image.keys).to eq([:location, :image_url])
+    expect(background.image[:location]).to eq('boston, ma')
+    expect(background.image[:image_url]).to eq("https://live.staticflickr.com/65535/51920565621_75ff0825a7.jpg")
     expect(background.credit).to eq({:author=>"ID: 151111185@N04", :source=>"flickr.com"})
   end
 end
