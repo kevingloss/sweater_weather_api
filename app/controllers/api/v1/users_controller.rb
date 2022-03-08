@@ -4,7 +4,6 @@ class Api::V1::UsersController < ApplicationController
 
     if user.save 
       user.api_keys.create!(api_key: SecureRandom.hex)
-
       json_response(UsersSerializer.new(user), :created)
     else
       json_response({error: 'Please enter valid email, password, and password confirmation.'}, :bad_request)
