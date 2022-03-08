@@ -18,6 +18,7 @@ RSpec.describe "User API Request", type: :request do
     expect(user[:attributes].keys).to eq([:email, :api_key])
     expect(user[:type]).to eq('users')
     expect(user[:attributes][:email]).to eq(params[:email])
+    expect(user[:attributes][:api_key]).to be_a(String)
   end
 
   it "won't create user if password/confirmation don't match" do
