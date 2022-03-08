@@ -43,8 +43,6 @@ end
 group :test do
   gem 'webmock'
   gem 'vcr'
-  gem 'faker'
-  gem 'factory_bot_rails'
   gem 'shoulda-matchers'
 end
 
