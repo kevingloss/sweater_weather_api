@@ -233,8 +233,8 @@ body:
 }
 ```
 ## Further Project Information
-[Turing Sweater Weather Overview](https://backend.turing.edu/module3/projects/sweater_weather/)
-[Turing Sweater Weather Requirements](https://backend.turing.edu/module3/projects/sweater_weather/requirements)
+- [Turing Sweater Weather Overview](https://backend.turing.edu/module3/projects/sweater_weather/)
+- [Turing Sweater Weather Requirements](https://backend.turing.edu/module3/projects/sweater_weather/requirements)
 
 ## **Contributors** ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
