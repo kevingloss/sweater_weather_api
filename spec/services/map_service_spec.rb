@@ -15,4 +15,27 @@ RSpec.describe MapService do
       expect(service[:results].first[:locations].first[:latLng]).to have_key(:lng)
     end
   end
+
+  describe 'can support road trip' do 
+    it 'can get the route given a origin and destination', :vcr do 
+      route = MapService.get_route('denver,co', 'pueblo,co')
+
+      expect(route).to be_a(Hash)
+      expect(route).to have_key(:route)
+      expect(route[:route]).to be_a(Hash)
+      expect(route[:route]).to have_key(:realTime)
+    end
+
+    it 'returns a route error if you can not drive there', :vcr do 
+      route = MapService.get_route('denver,co', 'london,uk')
+
+      expect(route).to be_a(Hash)
+      expect(route).to have_key(:route)
+      expect(route[:route]).to be_a(Hash)
+      expect(route[:route]).to have_key(:routeError)
+      expect(route[:route][:routeError]).to be_a(Hash)
+      expect(route[:route][:routeError]).to have_key(:errorCode)
+      expect(route[:route][:routeError][:errorCode]).to eq(2)
+    end
+  end
 end

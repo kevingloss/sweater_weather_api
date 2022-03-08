@@ -6,7 +6,7 @@ class Api::V1::ForecastController < ApplicationController
 
       json_response(ForecastSerializer.new(forecast))
     else
-      render json: {error: 'Please enter valid location.'}, status: :bad_request
+      json_response({error: 'Please enter valid location.'}, :bad_request)
     end
   end
 end
