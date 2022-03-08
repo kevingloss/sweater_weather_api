@@ -1,6 +1,6 @@
 class RoadTripFacade 
   class << self
-    def get_route(origin, destination)
+    def get_road_trip(origin, destination)
       route = MapService.get_route(origin, destination)[:route]
       
       if route[:realTime]
