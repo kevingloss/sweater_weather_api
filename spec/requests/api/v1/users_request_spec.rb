@@ -18,6 +18,7 @@ RSpec.describe "User API Request", type: :request do
     expect(user[:attributes].keys).to eq([:email, :api_key])
     expect(user[:type]).to eq('users')
     expect(user[:attributes][:email]).to eq(params[:email])
+    expect(user[:attributes][:api_key]).to be_a(String)
   end
 
   it "won't create user if password/confirmation don't match" do
@@ -54,7 +55,7 @@ RSpec.describe "User API Request", type: :request do
 
     post api_v1_users_path, headers: headers
 
-    expect(response.status).to eq(422)
-    expect(parse_json[:error]).to eq("param is missing or the value is empty: user")
+    expect(response.status).to eq(400)
+    expect(parse_json[:error]).to eq('Please enter valid email, password, and password confirmation.')
   end
 end
