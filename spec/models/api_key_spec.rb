@@ -15,9 +15,9 @@ RSpec.describe ApiKey, type: :model do
       key_3 = user_3.api_keys.create!(api_key: SecureRandom.hex)
 
       
-      expect(ApiKey.valid?(key_1)).to eq(true)
-      expect(ApiKey.valid?(key_2)).to eq(true)
-      expect(ApiKey.valid?(key_3)).to eq(true)
+      expect(ApiKey.valid?(key_1.api_key)).to eq(true)
+      expect(ApiKey.valid?(key_2.api_key)).to eq(true)
+      expect(ApiKey.valid?(key_3.api_key)).to eq(true)
       expect(ApiKey.valid?(SecureRandom.hex)).to eq(false)
     end
   end
