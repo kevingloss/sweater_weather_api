@@ -1,24 +1,3 @@
-# README
+This branch was used as assessment and built onto Sweater Weather as an extension to evaluate exposing/consuming of APIs.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Please see the main branch for full project.
