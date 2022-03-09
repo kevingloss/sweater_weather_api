@@ -490,6 +490,48 @@ RSpec.describe RoadTrip do
     expect(roadtrip.weather_at_eta).to eq({temperature: 46.17, conditions: 'few clouds'})
   end
 
+  it 'can tell user to find alternate route' do 
+    duration = 10000000
+    origin = 'denver, co'
+    destination = 'pueblo, co'
+
+    roadtrip = RoadTrip.new(origin, destination, duration, forecast)
+
+    expect(roadtrip.id).to eq(nil)
+    expect(roadtrip.start_city).to eq(origin)
+    expect(roadtrip.end_city).to eq(destination)
+    expect(roadtrip.travel_time).to eq('Please find alternate route.')
+    expect(roadtrip.weather_at_eta).to eq({temperature: 'Unknown', conditions: 'Unknown'})
+  end
+
+  it 'can return a road trip for under the 8 days' do 
+    duration = 604800
+    origin = 'denver, co'
+    destination = 'pueblo, co'
+
+    roadtrip = RoadTrip.new(origin, destination, duration, forecast)
+
+    expect(roadtrip.id).to eq(nil)
+    expect(roadtrip.start_city).to eq(origin)
+    expect(roadtrip.end_city).to eq(destination)
+    expect(roadtrip.travel_time).to eq("Trip duration is 168 hours and 0 minutes.")
+    expect(roadtrip.weather_at_eta).to eq({temperature: 51.31, conditions: "overcast clouds"})
+  end
+
+  it 'can create a road trip further than 8 days out' do 
+    duration = 1204800
+    origin = 'denver, co'
+    destination = 'pueblo, co'
+
+    roadtrip = RoadTrip.new(origin, destination, duration, forecast)
+
+    expect(roadtrip.id).to eq(nil)
+    expect(roadtrip.start_city).to eq(origin)
+    expect(roadtrip.end_city).to eq(destination)
+    expect(roadtrip.travel_time).to eq("Trip duration is 334 hours and 40 minutes.")
+    expect(roadtrip.weather_at_eta).to eq({temperature: 'Unknown', conditions: 'Unknown'})
+  end
+
   it 'can create a possible road trip less than an hour' do 
     duration = 900
     origin = 'denver, co'

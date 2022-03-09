@@ -11,6 +11,7 @@ class RoadTrip
 
   def trip_duration(duration)
     return duration if duration == 'impossible route'
+    return 'Please find alternate route.' if duration == 10000000
 
     hours = duration / 3600
     minutes = duration % 3600 / 60
@@ -30,12 +31,17 @@ class RoadTrip
         temperature: offset_forecast[:temp],
         conditions: offset_forecast[:weather].first[:description]
       }
-    else
+    elsif (offset_hours / 24).round <= 8
       offset_days = (offset_hours / 24.0).round
       offset_forecast = forecast[:daily][offset_days - 1]
       {
         temperature: offset_forecast[:temp][:max],
         conditions: offset_forecast[:weather].first[:description]
+      }
+    else
+      {
+        temperature: 'Unknown',
+        conditions: 'Unknown'
       }
     end
   end
