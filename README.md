@@ -119,7 +119,7 @@ Accept: application/json
     }
 }
 ```
-- Retrieve background image for a city
+### Retrieve background image for a city
 - Example Request:
 ```shell
 GET /api/v1/backgrounds?location=denver,co
