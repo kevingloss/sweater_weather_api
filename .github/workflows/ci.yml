@@ -4,6 +4,11 @@
 #
 # This workflow will install a prebuilt Ruby version, install dependencies, and
 # run tests and linters.
+env:
+  map_quest_key: 'Tlozaze717aNRgdqhG8LSe8xRGhN6TQM'
+  weather_key: 'b84b156e4bd181e2ee6502abc67b3257'
+  image_key: 'bbb9a195543278ecbd127c1ab4ac7bdf'
+
 name: "CI"
 on:
   push:
