@@ -29,11 +29,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       # Add or replace dependency steps here
-      - name: Install Ruby and gems
-        run: bundle install
-        run: bundle update
-        with:
-          bundler-cache: true
+      - name: Install Gems
+        run: bundle
       # Add or replace database setup steps here
       - name: Set up database schema
         run: bin/rails db:schema:load
