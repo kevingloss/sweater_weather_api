@@ -1,0 +1,128 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.flickr.com/services/rest?api_key=<api_key>&format=json&method=flickr.photos.search&nojsoncallback=1&tag=skyline&text=boston,%20ma
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 15 Mar 2022 18:05:45 GMT
+      Server:
+      - Apache/2.4.52 (Ubuntu)
+      Set-Cookie:
+      - ccc=%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D;
+        expires=Thu, 14-Apr-2022 18:05:45 GMT; Max-Age=2592000; path=/; domain=.flickr.com
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 88a0d5b7714dfdc4e8665b84ecf6f994.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C1
+      X-Amz-Cf-Id:
+      - blvvSsTSqs-ZOLhnNlVK1rboF0VKP1uekG4gfJiaoEpOyE26Ue5zVw==
+    body:
+      encoding: UTF-8
+      string: '{"photos":{"page":1,"pages":7612,"perpage":100,"total":761182,"photo":[{"id":"51940425025","owner":"194628431@N03","secret":"ab4b806820","server":"65535","farm":66,"title":"Real
+        estate companies near me Boston MA Real estate agent Boston MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51940420760","owner":"194628431@N03","secret":"6f5dd09bbf","server":"65535","farm":66,"title":"Apartment
+        rental agency Watertown MA Real estate companies near me Watertown MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938809272","owner":"194628431@N03","secret":"0f0ef25215","server":"65535","farm":66,"title":"Apartment
+        rental agency Jamaica Plain MA Real estate companies near me Jamaica Plain
+        MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51940413200","owner":"194628431@N03","secret":"b12ea1b174","server":"65535","farm":66,"title":"Apartment
+        rental agency Newton MA Real estate companies near me Newton MA Real estate
+        agent Newton MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939872263","owner":"194628431@N03","secret":"ebb21410e0","server":"65535","farm":66,"title":"Apartment
+        rental agency Brookline MA Real estate companies near me Brookline MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51940103244","owner":"194628431@N03","secret":"fbb2584e30","server":"65535","farm":66,"title":"Apartment
+        rental agency Allston MA Real estate companies near me Allston MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51940393815","owner":"194628431@N03","secret":"1b5ee5ecb9","server":"65535","farm":66,"title":"Apartment
+        rental agency Brighton MA Real estate companies near me Brighton MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51940345545","owner":"163761230@N04","secret":"80c00c0f27","server":"65535","farm":66,"title":"","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939959964","owner":"48232993@N00","secret":"0c2f92dbeb","server":"65535","farm":66,"title":"treasure
+        hunter","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51940256160","owner":"48232993@N00","secret":"5feebc2bba","server":"65535","farm":66,"title":"gulls
+        beside parking lot","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939959429","owner":"48232993@N00","secret":"4141795682","server":"65535","farm":66,"title":"wharf
+        with small crane","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51940255600","owner":"48232993@N00","secret":"6fb6438e09","server":"65535","farm":66,"title":"planted
+        horsechestnut","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939958844","owner":"48232993@N00","secret":"c1f752611e","server":"65535","farm":66,"title":"planted
+        cherry","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939568739","owner":"192360333@N06","secret":"5f014f0b98","server":"65535","farm":66,"title":"Isabella
+        Stewart Gardner Museum, Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939866255","owner":"192360333@N06","secret":"82cd5bdf10","server":"65535","farm":66,"title":"Boston
+        Public Garden, Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939306353","owner":"192360333@N06","secret":"384658e797","server":"65535","farm":66,"title":"Brighton,
+        Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939545109","owner":"192360333@N06","secret":"7bd1e2f0ff","server":"65535","farm":66,"title":"Brighton,
+        Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939267553","owner":"192360333@N06","secret":"66da9e3895","server":"65535","farm":66,"title":"Boston,
+        MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939266503","owner":"192360333@N06","secret":"b2784aab0f","server":"65535","farm":66,"title":"Chestnut
+        Hill Reservoir, Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939505069","owner":"192360333@N06","secret":"556588220f","server":"65535","farm":66,"title":"Boston
+        Public Garden, Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939183566","owner":"192360333@N06","secret":"80844dbc07","server":"65535","farm":66,"title":"Brighton,
+        Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939503529","owner":"192360333@N06","secret":"8d62d5acbf","server":"65535","farm":66,"title":"Brighton,
+        Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939181946","owner":"192360333@N06","secret":"e4dbd0b6d4","server":"65535","farm":66,"title":"Boston
+        Public Garden, Boston, MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51939103103","owner":"195204738@N03","secret":"aaa2a8f443","server":"65535","farm":66,"title":"City
+        Scapes (Boston)","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938941335","owner":"10364575@N06","secret":"dfbfa058d5","server":"65535","farm":66,"title":"J1040570BW","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938327831","owner":"10364575@N06","secret":"5c865f7340","server":"65535","farm":66,"title":"J1050461","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938327846","owner":"10364575@N06","secret":"0db6f36e52","server":"65535","farm":66,"title":"J1040850","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938327736","owner":"10364575@N06","secret":"2fbaa0bd22","server":"65535","farm":66,"title":"J1040273","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938404328","owner":"10364575@N06","secret":"37e623b0a7","server":"65535","farm":66,"title":"J1050668","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938182599","owner":"194628431@N03","secret":"2a89b1cff0","server":"65535","farm":66,"title":"Apartments
+        for rent Boston MA Apartment rental agency Boston MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937933878","owner":"194628431@N03","secret":"187b78f245","server":"65535","farm":66,"title":"Apartment
+        rental agency Watertown MA Real estate companies near me Watertown MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936864617","owner":"194628431@N03","secret":"c1d91eee41","server":"65535","farm":66,"title":"Apartment
+        rental agency Jamaica Plain MA Real estate companies near me Jamaica Plain
+        MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937847751","owner":"194628431@N03","secret":"8f32c1f61f","server":"65535","farm":66,"title":"Apartment
+        rental agency Brookline MA Real estate companies near me Brookline MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938456265","owner":"194628431@N03","secret":"3dc4777284","server":"65535","farm":66,"title":"Apartment
+        rental agency Allston MA Real estate companies near me Allston MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51938450295","owner":"194628431@N03","secret":"4f2aa55ba0","server":"65535","farm":66,"title":"Apartment
+        rental agency Brighton MA Real estate companies near me Brighton MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936287167","owner":"15040509@N07","secret":"ef3b252466","server":"65535","farm":66,"title":"On
+        the Corner","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936830046","owner":"54623838@N06","secret":"a0a89d0cb4","server":"65535","farm":66,"title":"Leprous-1","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936899758","owner":"54623838@N06","secret":"8087167148","server":"65535","farm":66,"title":"Leprous-2","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937143454","owner":"54623838@N06","secret":"65baaa35f0","server":"65535","farm":66,"title":"Leprous-4","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936828996","owner":"54623838@N06","secret":"ff707b1be7","server":"65535","farm":66,"title":"Leprous-5","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936898613","owner":"54623838@N06","secret":"6772925826","server":"65535","farm":66,"title":"Leprous-6","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936828406","owner":"54623838@N06","secret":"310a163441","server":"65535","farm":66,"title":"Leprous-7","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936897988","owner":"54623838@N06","secret":"f1360f0e2a","server":"65535","farm":66,"title":"Leprous-8","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936827581","owner":"54623838@N06","secret":"3abcdac63e","server":"65535","farm":66,"title":"Leprous-10","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937141229","owner":"54623838@N06","secret":"6bb75efc1e","server":"65535","farm":66,"title":"Leprous-11","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937140874","owner":"54623838@N06","secret":"b828245289","server":"65535","farm":66,"title":"Leprous-12","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936896233","owner":"54623838@N06","secret":"9d9841507b","server":"65535","farm":66,"title":"Leprous-13","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936826031","owner":"54623838@N06","secret":"648244c587","server":"65535","farm":66,"title":"Leprous-14","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937435030","owner":"54623838@N06","secret":"be4a226495","server":"65535","farm":66,"title":"Leprous-15","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937139364","owner":"54623838@N06","secret":"b7de5f61c9","server":"65535","farm":66,"title":"Leprous-16","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935838162","owner":"54623838@N06","secret":"165d1fc44b","server":"65535","farm":66,"title":"Leprous-17","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937433790","owner":"54623838@N06","secret":"1916f18b91","server":"65535","farm":66,"title":"Leprous-18","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937432910","owner":"54623838@N06","secret":"e7386cf343","server":"65535","farm":66,"title":"Leprous-19","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937432550","owner":"54623838@N06","secret":"b97ec8941f","server":"65535","farm":66,"title":"Leprous-21","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936822111","owner":"54623838@N06","secret":"243b4098ed","server":"65535","farm":66,"title":"Leprous-22","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937135944","owner":"54623838@N06","secret":"eb1c3bf676","server":"65535","farm":66,"title":"The
+        Ocean-1","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936821266","owner":"54623838@N06","secret":"3c7f902055","server":"65535","farm":66,"title":"The
+        Ocean-2","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937429970","owner":"54623838@N06","secret":"fb424ca8d2","server":"65535","farm":66,"title":"The
+        Ocean-4","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936820106","owner":"54623838@N06","secret":"3f2f7f4a71","server":"65535","farm":66,"title":"The
+        Ocean-5","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937428870","owner":"54623838@N06","secret":"6c25100333","server":"65535","farm":66,"title":"The
+        Ocean-6","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937133194","owner":"54623838@N06","secret":"8609d8fce9","server":"65535","farm":66,"title":"The
+        Ocean-8","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937428420","owner":"54623838@N06","secret":"c4ee413e15","server":"65535","farm":66,"title":"The
+        Ocean-9","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936888038","owner":"54623838@N06","secret":"2e8fe6c1dd","server":"65535","farm":66,"title":"The
+        Ocean-10","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935831207","owner":"54623838@N06","secret":"8018a99901","server":"65535","farm":66,"title":"The
+        Ocean-12","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937131439","owner":"54623838@N06","secret":"8e1b1dd302","server":"65535","farm":66,"title":"The
+        Ocean-14","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936886433","owner":"54623838@N06","secret":"3cc2a35da6","server":"65535","farm":66,"title":"The
+        Ocean-15","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935829932","owner":"54623838@N06","secret":"2ec1bd0603","server":"65535","farm":66,"title":"The
+        Ocean-16","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935828977","owner":"54623838@N06","secret":"029570b382","server":"65535","farm":66,"title":"The
+        Ocean-19","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937424235","owner":"54623838@N06","secret":"1233919e31","server":"65535","farm":66,"title":"The
+        Ocean-24","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936883763","owner":"54623838@N06","secret":"ba70ddf001","server":"65535","farm":66,"title":"The
+        Ocean-26","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937127654","owner":"54623838@N06","secret":"9ea976252d","server":"65535","farm":66,"title":"The
+        Ocean-27","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936882893","owner":"54623838@N06","secret":"4634851b00","server":"65535","farm":66,"title":"The
+        Ocean-28","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937126619","owner":"54623838@N06","secret":"9d5aeebd87","server":"65535","farm":66,"title":"The
+        Ocean-29","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937421665","owner":"54623838@N06","secret":"c11456c4ff","server":"65535","farm":66,"title":"The
+        Ocean-30","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936880933","owner":"54623838@N06","secret":"cdbdb58fb3","server":"65535","farm":66,"title":"The
+        Ocean-31","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935823522","owner":"54623838@N06","secret":"59c3ae5616","server":"65535","farm":66,"title":"The
+        Ocean-34","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936879188","owner":"54623838@N06","secret":"da0db062c4","server":"65535","farm":66,"title":"The
+        Ocean-36","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936808956","owner":"54623838@N06","secret":"cb1c3784f9","server":"65535","farm":66,"title":"The
+        Ocean-37","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937122109","owner":"54623838@N06","secret":"1b6af7fcee","server":"65535","farm":66,"title":"The
+        Ocean-38","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937121589","owner":"54623838@N06","secret":"7d9a40bf0f","server":"65535","farm":66,"title":"The
+        Ocean-39","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936807091","owner":"54623838@N06","secret":"a2decdb8d9","server":"65535","farm":66,"title":"The
+        Ocean-40","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937120739","owner":"54623838@N06","secret":"ac8009451b","server":"65535","farm":66,"title":"The
+        Ocean-41","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51937051930","owner":"69345640@N00","secret":"5d998dc94b","server":"65535","farm":66,"title":"Boston,
+        MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936444116","owner":"69345640@N00","secret":"9e11380fb9","server":"65535","farm":66,"title":"Boston,
+        MA","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936950825","owner":"67537045@N03","secret":"d1fe74fe70","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 01","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936657199","owner":"67537045@N03","secret":"110b8386a8","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 03","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935356537","owner":"67537045@N03","secret":"4d43cb74e2","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 04","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936657164","owner":"67537045@N03","secret":"ef44d62d05","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 07","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936950770","owner":"67537045@N03","secret":"ca7fafab78","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 09","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936343916","owner":"67537045@N03","secret":"9e63f431d8","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 10","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936950725","owner":"67537045@N03","secret":"076e4525ec","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 12","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936657114","owner":"67537045@N03","secret":"2952c00c45","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 13","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935356412","owner":"67537045@N03","secret":"7a7dbbdff9","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 17","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936413568","owner":"67537045@N03","secret":"7a24cc2c58","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 02","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935356422","owner":"67537045@N03","secret":"6e74c65820","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 16","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936657089","owner":"67537045@N03","secret":"3b4a9cbc39","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 15","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936343781","owner":"67537045@N03","secret":"21587b75e5","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 14","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936657034","owner":"67537045@N03","secret":"6b15f2b059","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 08","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51935356357","owner":"67537045@N03","secret":"7872c30314","server":"65535","farm":66,"title":"3.13.22
+        Winter Fields Corner 18","ispublic":1,"isfriend":0,"isfamily":0},{"id":"51936201331","owner":"69345640@N00","secret":"154a9eae21","server":"65535","farm":66,"title":"Boston,
+        MA","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+  recorded_at: Tue, 15 Mar 2022 18:05:45 GMT
+recorded_with: VCR 6.0.0
