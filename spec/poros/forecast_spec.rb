@@ -590,9 +590,9 @@ RSpec.describe Forecast do
   it 'has correct values for current forecast' do 
     current_forecast = Forecast.new(@data).current
 
-    expect(current_forecast[:datetime]).to eq("2022-03-05 15:30:37 -0700")
-    expect(current_forecast[:sunrise]).to eq("2022-03-05 04:13:19 -0700")
-    expect(current_forecast[:sunset]).to eq("2022-03-05 15:38:26 -0700")
+    expect(current_forecast[:datetime]).to eq(Time.at(@data[:current][:dt]).to_s)
+    expect(current_forecast[:sunrise]).to eq(Time.at(@data[:current][:sunrise]).to_s)
+    expect(current_forecast[:sunset]).to eq(Time.at(@data[:current][:sunset]).to_s)
     expect(current_forecast[:temperature]).to eq(39.24)
     expect(current_forecast[:feels_like]).to eq(32.54)
     expect(current_forecast[:humidity]).to eq(41)
@@ -606,7 +606,7 @@ RSpec.describe Forecast do
     hourly_forecast = Forecast.new(@data).hourly
 
     expect(hourly_forecast.count).to eq(8)
-    expect(hourly_forecast.first[:time]).to eq("15:00:00")
+    expect(hourly_forecast.first[:time]).to eq(Time.at(@data[:hourly].first[:dt]).strftime('%H:%M:%S'))
     expect(hourly_forecast.first[:temperature]).to eq(38.46)
     expect(hourly_forecast.first[:conditions]).to eq('overcast clouds')
     expect(hourly_forecast.first[:icon]).to eq('04d')
@@ -616,9 +616,9 @@ RSpec.describe Forecast do
     daily_forecast = Forecast.new(@data).daily
 
     expect(daily_forecast.count).to eq(5)
-    expect(daily_forecast.first[:date]).to eq("2022-03-05")
-    expect(daily_forecast.first[:sunrise]).to eq("2022-03-05 04:13:19 -0700")
-    expect(daily_forecast.first[:sunset]).to eq("2022-03-05 15:38:26 -0700")
+    expect(daily_forecast.first[:date]).to eq(Time.at(@data[:daily].first[:dt]).strftime('%Y-%m-%d'))
+    expect(daily_forecast.first[:sunrise]).to eq(Time.at(@data[:daily].first[:sunrise]).to_s)
+    expect(daily_forecast.first[:sunset]).to eq(Time.at(@data[:daily].first[:sunset]).to_s)
     expect(daily_forecast.first[:max_temp]).to eq(39.24)
     expect(daily_forecast.first[:min_temp]).to eq(23.4)
     expect(daily_forecast.first[:conditions]).to eq('overcast clouds')
